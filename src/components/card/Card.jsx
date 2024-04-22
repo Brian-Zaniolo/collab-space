@@ -56,7 +56,7 @@ const cardStyle = {
     }
 }
 export const Button = styled.button`
-    display: flex;  
+    display: flex;    
     align-items: center;
     border: none;
     background-color: transparent;
