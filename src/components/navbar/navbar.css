@@ -1,0 +1,64 @@
+.navigation {
+    background-color: var(--background);
+    height: 7vh;
+}
+
+button {
+    border-style: none;
+    background-color: var(--background);
+    font-size: 95%;
+    border-radius: 5%;
+    padding: 10px 0px;
+    margin-top: 1.5vh;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    color: var(--whiteAccent);
+
+    &:hover {
+        background-color: var(--onBackground);
+    }
+}
+
+.buttonSpecial {
+    background-color: var(--primary);
+}
+
+.buttonSpecial:hover {
+    background-color: #8dbfc2;
+}
+
+.leftNav {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.leftNav img {
+    height: 10vh;
+}
+
+.rightNav {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background-color: var(--background);
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 1.5vh;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 6px 12px;
+}
+
+span {
+    margin-left: -3px;
+}
+
+#notification {
+    border-radius: 50%;
+    width: 32px;
+}
