@@ -1,0 +1,12 @@
+.home__container {
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    height: 100dvh;
+    width: 100dvw;
+
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+}

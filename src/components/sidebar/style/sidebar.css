@@ -1,0 +1,25 @@
+.sidebar {
+    background-color: var(--background);
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    padding: 1rem;
+    color: var(--whiteAccent);
+
+    .sidebar__content {
+        display: flex;
+        flex-direction: column;
+        width: min(100%, 300px);
+        gap: 0.5rem;;
+    }
+}
+
+hr {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.workspaces__title {
+    font-size: small;
+    color: lightgray;
+}
