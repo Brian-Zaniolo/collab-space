@@ -1,8 +1,9 @@
 :root {
     --background: #222831;
-    --onBackground: #31363f;
+    --onBackground: #313135;
     --primary: #76abae;
     --whiteAccent: #eeeeee;
+    --hover-dark-btn: rgba(205, 205, 205, 0.45);
 }
 
 body {
