@@ -1,4 +1,4 @@
-.sidebar {
+.sidebarHome {
     background-color: var(--background);
     display: flex;
     flex-flow: column;
@@ -6,7 +6,7 @@
     padding: 1rem;
     color: var(--whiteAccent);
 
-    .sidebar__content {
+    .sidebarHome__content {
         display: flex;
         flex-direction: column;
         width: min(100%, 300px);
@@ -14,12 +14,12 @@
     }
 }
 
-hr {
+.sidebarHome hr {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.workspaces__title {
+.sidebarHome .workspaces__title {
     font-size: small;
     color: lightgray;
 }

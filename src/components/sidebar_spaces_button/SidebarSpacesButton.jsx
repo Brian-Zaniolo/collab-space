@@ -17,7 +17,7 @@ const SidebarSpacesButton = ({ item }) => {
         <div className="sidebar__spaces-button" onClick={() => setOpen(!open)}>
             <div className="sidebar__spaces-button-header">
                 <MdWorkspaces />
-                {item.text}
+                {item.title}
                 {open ? <FaCaretUp /> : <FaCaretDown />}
             </div>
             {open && (

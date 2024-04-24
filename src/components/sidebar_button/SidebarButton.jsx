@@ -1,4 +1,4 @@
-import { homeRouter } from '../../pages/home/home';
+import { homeRouter } from '../../pages/home/Home';
 import './style/sidebarButton.css';
 import { v4 as uuidv4 } from 'uuid';
 

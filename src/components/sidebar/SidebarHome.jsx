@@ -1,11 +1,11 @@
-import './style/sidebar.css';
+import './style/sidebarHome.css';
 import SidebarButton from '../sidebar_button/SidebarButton';
 import SidebarSpacesButton from '../sidebar_spaces_button/SidebarSpacesButton';
 
-const Sidebar = ({ structure }) => {
+const SidebarHome = ({ structure }) => {
     return (
-        <div className="sidebar">
-            <div className="sidebar__content">
+        <div className="sidebarHome">
+            <div className="sidebarHome__content">
                 {structure.header &&
                     structure.header.map((item, index) => {
                         return (
@@ -29,4 +29,4 @@ const Sidebar = ({ structure }) => {
         </div>
     );
 };
-export default Sidebar;
+export default SidebarHome;

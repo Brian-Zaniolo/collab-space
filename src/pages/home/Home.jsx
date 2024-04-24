@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Sidebar from '../../components/sidebar/Sidebar';
+import SidebarHome from '../../components/sidebar/SidebarHome';
 import './style/home.css';
 import { MdDashboard } from 'react-icons/md';
 
@@ -32,7 +32,7 @@ const sidebarStructure = {
 const Home = () => {
     return (
         <div className="home__container">
-            <Sidebar structure={sidebarStructure} />
+            <SidebarHome structure={sidebarStructure} />
             <div className="home__content">
                 <RouterProvider router={homeRouter} />
             </div>
