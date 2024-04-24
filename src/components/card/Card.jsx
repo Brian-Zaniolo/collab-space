@@ -8,7 +8,7 @@ import { IoClose } from 'react-icons/io5';
 import './card.css';
 import CardItem from './CardItem';
 import CardDropDownAction from './CardDropDownAction';
-import useOutsideClick from '../hooks/useOutsideClick';
+import useOutsideClick from '../../hooks/useOutsideClick';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCardItem, getCardItems } from '../../store/slices/CardItemSlice';
 

@@ -4,7 +4,7 @@ import { MdOutlineEdit } from 'react-icons/md';
 import { getCardItems, updateCardItem } from '../../store/slices/CardItemSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import EditScheda from './EditScheda';
-import useOutsideClick from '../hooks/useOutsideClick';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 const CardItem = ({ item }) => {
     const [hover, setHover] = useState(false);
