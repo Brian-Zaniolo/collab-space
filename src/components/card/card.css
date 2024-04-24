@@ -1,0 +1,21 @@
+
+.card-title :hover  ,.card-title :focus-visible , .card-title:focus , .card-title:active {
+    cursor: pointer;
+    outline: 2px solid #1ea7fd
+}
+.card-text-area:hover ,.card-text-area:active,.card-text-area :focus-visible , .card-text-area:focus {
+    outline: none ;
+}
+.card-icon-btn:hover ,.card-icon-btn:active,.card-icon-btn :focus-visible , .card-icon-btn:focus {
+    cursor: pointer;
+    outline: 2px solid var(--hover-dark-btn);
+    background-color: var(--hover-dark-btn);
+}
+.card-item-edit:hover ,.card-item-edit-btn:focus  ,.card-item-edit-btn:active,.card-item-edit-btn :focus-visible  {
+    border-radius: 50%;
+    padding: 4px;
+    background-color: var(--hover-dark-btn);
+}
+.card-item-area:hover ,.card-item-area:active,.card-item-area :focus-visible , .card-item-area:focus {
+    outline: none ;
+}
