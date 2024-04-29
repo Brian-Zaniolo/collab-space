@@ -1,0 +1,7 @@
+.edit-card-save-btn:hover , .edit-card-save-btn:focus {
+    cursor: pointer;
+    background-color: #065dbd !important;
+}
+.edit-card-input:hover , .edit-card-input:focus , .edit-card-textarea:hover , .edit-card-textarea:focus {
+    outline: none;
+}
