@@ -7,9 +7,9 @@ const NavbarSpazioDiLavoro = ({ buttonName, control }) => {
                   : 'navbar_dropdown-content'
           }
       >
-          <li>Spazio di lavoro</li>
-          <li>Spazio di lavoro</li>
-          <li>Spazio di lavoro</li>
+          <li className='navbar_creaLi'>Spazio di lavoro</li>
+          <li className='navbar_creaLi'>Spazio di lavoro</li>
+          <li className='navbar_creaLi'>Spazio di lavoro</li>
       </ul>
   );
 };

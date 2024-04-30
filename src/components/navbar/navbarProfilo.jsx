@@ -1,3 +1,5 @@
+import "./navbarProfilo.css"
+
 const NavbarProfilo = () => {
   return (
       <>

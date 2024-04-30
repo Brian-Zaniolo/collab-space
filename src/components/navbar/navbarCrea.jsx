@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import NavbarCreaBacheca from './navbarCreaBacheca';
+import "./navbarCrea.css"
 
-const NavbarCrea = () => {
+const NavbarCrea = ({close}) => {
     const [creaBacheca, setCreaBacheca] = useState(false);
 
     const handleCreaBacheca = () => {
@@ -12,10 +13,10 @@ const NavbarCrea = () => {
         <>
             <ul className="navbar_dropdown-content" style={{background: 'var(--onBackground)'}}>
                 {creaBacheca ? (
-                    <NavbarCreaBacheca prova={handleCreaBacheca } />
+                    <NavbarCreaBacheca back={handleCreaBacheca} close={close} />
                 ) : (
                     <>
-                        <li onClick={handleCreaBacheca}>
+                        <li className='navbar_creaLi' onClick={handleCreaBacheca}>
                             <h4>Crea una bacheca</h4>
                             <p>
                                 Una bacheca è una raccolta di schede ordinate in
@@ -24,7 +25,7 @@ const NavbarCrea = () => {
                                 qualsiasi cosa.
                             </p>
                         </li>
-                        <li>
+                        <li className='navbar_creaLi'>
                             <h4>Crea spazio di lavoro</h4>
                             <p>
                                 Uno Spazio di lavoro è un gruppo di bacheche e

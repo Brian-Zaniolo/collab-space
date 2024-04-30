@@ -1,0 +1,26 @@
+.navbar_notification {
+  border-style: none;
+  cursor: pointer;
+  background-color: var(--background);
+  font-size: 95%;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 6px 12px;
+  color: var(--whiteAccent);
+  &:hover {
+      filter: brightness(120%);
+  }
+  border-radius: 50%;
+  width: 32px;
+  box-shadow: 0 0 2px var(--whiteAccent);
+}
+
+.navbar_dropDownMenu {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#navbar_buttonSpecial {
+  background-color: var(--primary);
+}

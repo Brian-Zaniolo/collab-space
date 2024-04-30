@@ -4,6 +4,7 @@ import { IoMdNotifications } from 'react-icons/io';
 import NavbarCrea from './navbarCrea';
 import NavbarProfilo from "./navbarProfilo";
 import NavbarSpazioDiLavoro from "./navbarSpazioDiLavoro";
+import "./navbarButtonDropDown.css"
 
 const NavbarButtonDropDown = ({ buttonName, control }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -61,7 +62,7 @@ const NavbarButtonDropDown = ({ buttonName, control }) => {
                   buttonName === 'Profilo' ? (
                       <NavbarProfilo />
                   ) : buttonName === 'Crea' ? (
-                      <NavbarCrea/>
+              <NavbarCrea close={handleVisibility} />
                   ) : (
                       <NavbarSpazioDiLavoro
                           buttonName={buttonName}

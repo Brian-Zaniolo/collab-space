@@ -29,7 +29,7 @@ const Navbar = () => {
                     >
                         <GrSearch />
                     </span>
-                    <input type="text" placeholder="Cerca" />
+                    <input className={'searchInput'} type="text" placeholder="Cerca" />
                     <NavbarButtonDropDown control={false} />
                     <NavbarButtonDropDown buttonName={'Profilo'} control={true} />
                 </div>

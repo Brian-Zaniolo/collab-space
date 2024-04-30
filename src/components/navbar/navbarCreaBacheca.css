@@ -1,0 +1,59 @@
+.creaBachecaLi {
+  color: white;
+  font-size: small;
+  padding: 12px 12px;
+}
+
+.navbar_titoloBachecaInput {
+  background-color: var(--background);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-right: 5px;
+  padding-left: 5px;
+  height: 28px;
+  width: 93%;
+  outline: none;
+  border: 2px solid #e34935;
+
+  &:valid{
+    border: none;
+  }
+
+  &:hover {
+      filter: brightness(120%);
+  }
+
+  &:focus {
+      border: 2px solid var(--primary);
+  }
+
+}
+
+.visibility_selected {
+  cursor: pointer;
+  background-color: var(--background);
+  padding: 10px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.visibility_selected_content {
+  padding: 1px 10px;
+  background-color: var(--background);
+  cursor: pointer;
+  list-style: none;
+
+  p {
+    margin: 10px 5px;
+  }
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
