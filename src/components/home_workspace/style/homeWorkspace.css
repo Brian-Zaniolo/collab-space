@@ -1,0 +1,65 @@
+.boards__home__workspace__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .boards__home__workspace__header__buttons {
+        display: flex;
+        gap: 10px;
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            background-color: var(--onBackground);
+            color: var(--whiteAccent);
+            border: none;
+            border-radius: 5px;
+            padding: .8rem 1.5rem;
+            cursor: pointer;
+
+            .boards__home__workspace__header__buttons__icon {
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                background-color: var(--fadedPrimary);
+            }
+        }
+    }
+}
+
+.boards__home__workspace__content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    height: clamp(100px, 18dvh, 250px);
+}
+
+.boards__home__create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--onBackground);
+    border-radius: 5px;
+    padding: 5rem;
+
+    color: var(--whiteAccent);
+
+    &:hover {
+        background-color: var(--fadedPrimary);
+    }
+}
+
+.board__card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp(200px, 100%, 300px);
+    height: clamp(100px, 100%, 250px);
+    border-radius: 0.5rem;
+    background-color: var(--onBackground);
+    color: var(--whiteAccent);
+}

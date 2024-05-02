@@ -1,0 +1,13 @@
+.boards__home__container {
+    display: flex;
+    flex-flow: column;
+    margin-top: 20px;
+
+    h2 {
+        color: slategray;
+    }
+
+    h3 {
+        color: var(--primary);
+    }
+}

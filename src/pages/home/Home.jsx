@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SidebarHome from '../../components/sidebar/SidebarHome';
 import './style/home.css';
 import { MdDashboard } from 'react-icons/md';
+import BoardsHome from '../bacheche_home/BoardsHome';
 
 const sidebarStructure = {
     header: [
@@ -45,7 +46,7 @@ export default Home;
 export const homeRouter = createBrowserRouter([
     {
         path: '/',
-        element: <h1>home1</h1>,
+        element: <BoardsHome />,
     },
     {
         path: '/1',
