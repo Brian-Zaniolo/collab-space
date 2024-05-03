@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useOutsideClick = (ref, buttonRef, callback) => {
+const useOutsideClick = (ref, buttonRef, callback, parametro) => {
     const handleClick = (e) => {
         if (
             ref.current &&
@@ -13,9 +13,9 @@ const useOutsideClick = (ref, buttonRef, callback) => {
     };
 
     useEffect(() => {
-        document.addEventListener('click', handleClick);
+        document.addEventListener(parametro, handleClick);
         return () => {
-            document.removeEventListener('click', handleClick);
+            document.removeEventListener(parametro, handleClick);
         };
     }, [ref, buttonRef, callback]);
 };

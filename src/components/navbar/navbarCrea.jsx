@@ -1,20 +1,33 @@
 import { useState } from 'react';
 import NavbarCreaBacheca from './navbarCreaBacheca';
 import "./navbarCrea.css"
+import NavbarCreaSpazio from './navbarCreaSpazio';
 
 const NavbarCrea = ({close}) => {
     const [creaBacheca, setCreaBacheca] = useState(false);
+    const [creaSpazio, setCreaSpazio] = useState(false);
 
     const handleCreaBacheca = () => {
         setCreaBacheca(!creaBacheca);
     };
 
+    const handleCreaSpazio = () => {
+        setCreaSpazio(!creaSpazio);
+        console.log(creaSpazio);
+    }
+
     return (
         <>
             <ul className="navbar_dropdown-content" style={{background: 'var(--onBackground)'}}>
                 {creaBacheca ? (
-                    <NavbarCreaBacheca back={handleCreaBacheca} close={close} />
-                ) : (
+                    <>
+                        <NavbarCreaBacheca back={handleCreaBacheca} close={close} />
+                    </>
+                ) : creaSpazio ? (
+                        <>
+                            <NavbarCreaSpazio close={close} />
+                        </>
+                    ) : (
                     <>
                         <li className='navbar_creaLi' onClick={handleCreaBacheca}>
                             <h4>Crea una bacheca</h4>
@@ -25,7 +38,7 @@ const NavbarCrea = ({close}) => {
                                 qualsiasi cosa.
                             </p>
                         </li>
-                        <li className='navbar_creaLi'>
+                        <li className='navbar_creaLi' onClick={handleCreaSpazio}>
                             <h4>Crea spazio di lavoro</h4>
                             <p>
                                 Uno Spazio di lavoro è un gruppo di bacheche e

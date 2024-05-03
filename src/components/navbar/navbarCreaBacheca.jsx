@@ -13,6 +13,10 @@ const NavbarCreaBacheca = ({ back, close }) => {
     const [value, setValue] = useState('Spazio di lavoro');
     const [open, setOpen] = useState(false);
 
+    const [backgroundSpaceButton, setBackgroundSpaceButton] = useState(
+        'linear-gradient(red, pink)'
+    );
+
     const valuesVisibility = [
         { name: 'Privato', key: 1 },
         { name: 'Spazio di lavoro', key: 2 },
@@ -31,7 +35,7 @@ const NavbarCreaBacheca = ({ back, close }) => {
         setOpen((prev) => !prev);
     };
 
-    useOutsideClick(refOutside, refButton, () => setOpen(false));
+    useOutsideClick(refOutside, refButton, () => setOpen(false), 'click');
 
     return (
         <>
@@ -52,6 +56,8 @@ const NavbarCreaBacheca = ({ back, close }) => {
                         display: 'inline-block',
                         textAlign: 'center',
                         width: '73%',
+                        marginBottom: '5px',
+                        marginTop: '5px',
                     }}
                 >
                     Crea Bacheca
@@ -67,6 +73,74 @@ const NavbarCreaBacheca = ({ back, close }) => {
                 >
                     <RxCross1 />
                 </button>
+            </li>
+            <li className="creaBachecaLi">
+                <div
+                    className="creaBachecaSelectedBackground"
+                    style={{ backgroundImage: backgroundSpaceButton }}
+                ></div>
+                <p>Sfondo</p>
+                <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                >
+                    <button
+                        className="buttonBackground"
+                        style={{
+                            backgroundImage: 'linear-gradient(red, pink)',
+                        }}
+                        onClick={() =>
+                            setBackgroundSpaceButton(
+                                'linear-gradient(red, pink)'
+                            )
+                        }
+                    ></button>
+                    <button
+                        className="buttonBackground"
+                        style={{
+                            backgroundImage: 'linear-gradient(blue, lightblue)',
+                        }}
+                        onClick={() =>
+                            setBackgroundSpaceButton(
+                                'linear-gradient(blue, lightblue)'
+                            )
+                        }
+                    ></button>
+                    <button
+                        className="buttonBackground"
+                        style={{
+                            backgroundImage:
+                                'linear-gradient(green, lightgreen)',
+                        }}
+                        onClick={() =>
+                            setBackgroundSpaceButton(
+                                'linear-gradient(green, lightgreen)'
+                            )
+                        }
+                    ></button>
+                    <button
+                        className="buttonBackground"
+                        style={{
+                            backgroundImage:
+                                'linear-gradient(yellow, lightyellow)',
+                        }}
+                        onClick={() =>
+                            setBackgroundSpaceButton(
+                                'linear-gradient(yellow, lightyellow)'
+                            )
+                        }
+                    ></button>
+                    <button
+                        className="buttonBackground"
+                        style={{
+                            backgroundImage: 'linear-gradient(purple, violet)',
+                        }}
+                        onClick={() =>
+                            setBackgroundSpaceButton(
+                                'linear-gradient(purple, violet)'
+                            )
+                        }
+                    ></button>
+                </div>
             </li>
             <li className="creaBachecaLi">
                 <div>
@@ -98,7 +172,9 @@ const NavbarCreaBacheca = ({ back, close }) => {
                             Il titolo della bacheca è obbligatorio
                         </p>
                     </div>
-                    <p>Visibilità</p>
+                    <p style={{ marginTop: '15px', marginBottom: '4px' }}>
+                        Visibilità
+                    </p>
                     <div>
                         <div
                             onClick={() => setOpen(!open)}
@@ -116,7 +192,14 @@ const NavbarCreaBacheca = ({ back, close }) => {
                         {open && (
                             <ul
                                 ref={refOutside}
-                                style={{ paddingLeft: 0, width: '356px' }}
+                                style={{
+                                    paddingLeft: 0,
+                                    width: '356px',
+                                    zIndex: 1,
+                                    position: 'absolute',
+                                    border: '2px solid grey',
+                                    borderRadius: '8px',
+                                }}
                             >
                                 {valuesVisibility.map((value) => {
                                     return (

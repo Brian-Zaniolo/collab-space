@@ -5,6 +5,7 @@ import NavbarCrea from './navbarCrea';
 import NavbarProfilo from "./navbarProfilo";
 import NavbarSpazioDiLavoro from "./navbarSpazioDiLavoro";
 import "./navbarButtonDropDown.css"
+import NavbarNotification from "./navbarNotification";
 
 const NavbarButtonDropDown = ({ buttonName, control }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,7 +18,7 @@ const NavbarButtonDropDown = ({ buttonName, control }) => {
 
   useEffect(() => {
       const handleClickOutside = (event) => {
-          if (!ref.current.contains(event.target)) {
+          if (ref.current && !ref.current.contains(event.target)) {
               setIsVisible(false);
           }
       };
@@ -63,7 +64,9 @@ const NavbarButtonDropDown = ({ buttonName, control }) => {
                       <NavbarProfilo />
                   ) : buttonName === 'Crea' ? (
               <NavbarCrea close={handleVisibility} />
-                  ) : (
+                  ) : !control ?  (
+                    <NavbarNotification />
+                  ) :(
                       <NavbarSpazioDiLavoro
                           buttonName={buttonName}
                           control={control}
