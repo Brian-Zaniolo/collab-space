@@ -1,6 +1,7 @@
 .sidebarHome {
     background-color: var(--background);
     display: flex;
+    height: 90dvh;
     flex-flow: column;
     align-items: flex-end;
     padding: 1rem;

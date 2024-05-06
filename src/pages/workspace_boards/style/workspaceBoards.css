@@ -1,5 +1,14 @@
 .workspaceBoard__container {
     display: flex;
     flex-flow: column;
+    height: 90dvh;
     color: slategray;
+
+    .workspaceBoard__boards__container {
+        display: grid;
+        overflow-y: scroll;
+        place-items: center;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
 }
