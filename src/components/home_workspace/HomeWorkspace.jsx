@@ -27,9 +27,10 @@ const HomeWorkspace = ({ workspace }) => {
                 {workspace.boards.length !== 0 ? (
                     workspace.boards.map((board) => <BoardCard board={board} />)
                 ) : (
-                    <div className="board__card__container">
-                        Create new board
-                    </div>
+                    <BoardCard
+                        board={{ name: 'Create new board' }}
+                        action={() => alert('Create new board')}
+                    />
                 )}
             </div>
         </>

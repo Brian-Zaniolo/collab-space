@@ -3,6 +3,7 @@ import SidebarHome from '../../components/sidebar/SidebarHome';
 import './style/home.css';
 import { MdDashboard } from 'react-icons/md';
 import BoardsHome from '../bacheche_home/BoardsHome';
+import WorkspaceBoards from '../workspace_boards/WorkspaceBoards';
 
 const sidebarStructure = {
     header: [
@@ -16,7 +17,7 @@ const sidebarStructure = {
         {
             title: 'Workspace 1',
             icon: <MdDashboard />,
-            route: '/1',
+            route: `/workspaces/1`,
         },
         {
             title: 'Workspace 2',
@@ -49,8 +50,8 @@ export const homeRouter = createBrowserRouter([
         element: <BoardsHome />,
     },
     {
-        path: '/1',
-        element: <h1>home2</h1>,
+        path: '/workspaces/:id',
+        element: <WorkspaceBoards />,
     },
     {
         path: '/2',

@@ -1,0 +1,5 @@
+.workspaceBoard__container {
+    display: flex;
+    flex-flow: column;
+    color: slategray;
+}

@@ -29,7 +29,7 @@ const SidebarSpacesButton = ({ item }) => {
                         <SidebarButton
                             text="Bacheche"
                             leadingIcon={<MdDashboard />}
-                            route={`/boards/${item.id}`}
+                            route={item.route}
                         />
                         <SidebarButton
                             text="Punti salienti"
