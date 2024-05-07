@@ -8,7 +8,7 @@
         display: grid;
         overflow-y: scroll;
         place-items: center;
-        grid-gap: 1.2rem;
+        gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
