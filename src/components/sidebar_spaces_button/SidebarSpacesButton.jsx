@@ -42,7 +42,7 @@ const SidebarSpacesButton = ({ item }) => {
                             trailingIcon={
                                 <AiOutlineArrowRight className="trailing__icon" />
                             }
-                            route={`/members/${item.id}`}
+                            route={`/workspaces/${item.id}/members`}
                         />
                         <SidebarButton
                             text="Impostazioni"

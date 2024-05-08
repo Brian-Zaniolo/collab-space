@@ -1,20 +1,25 @@
-import { homeRouter } from '../../pages/home/Home';
 import './style/sidebarButton.css';
 import { v4 as uuidv4 } from 'uuid';
+import { homeRouter } from '../../pages/home/Home';
 
-const SidebarButton = ({ leadingIcon, trailingIcon, text, route, isFirst }) => {
+const SidebarButton = ({
+    leadingIcon,
+    trailingIcon,
+    text,
+    route,
+    isFirst,
+    groupName = 'sidebar',
+}) => {
     const id = uuidv4();
     return (
         <div>
             <input
                 type="radio"
                 id={id}
-                name="sidebar__button"
+                name={groupName}
                 className="sidebar__button__input"
+                onInput={() => homeRouter.navigate(route)}
                 key={id}
-                onInput={() => {
-                    homeRouter.navigate(route);
-                }}
                 defaultChecked={isFirst}
             />
             <label htmlFor={id} className="sidebar__button">

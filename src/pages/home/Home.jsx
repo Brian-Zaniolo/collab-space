@@ -4,6 +4,8 @@ import './style/home.css';
 import { MdDashboard } from 'react-icons/md';
 import BoardsHome from '../bacheche_home/BoardsHome';
 import WorkspaceBoards from '../workspace_boards/WorkspaceBoards';
+import MemberManagementPage from '../member_management_page/MemberManagementPage';
+import React from 'react';
 
 const sidebarStructure = {
     header: [
@@ -15,16 +17,19 @@ const sidebarStructure = {
     ],
     spaces: [
         {
+            id: 1,
             title: 'Workspace 1',
             icon: <MdDashboard />,
             route: `/workspaces/1`,
         },
         {
+            id: 2,
             title: 'Workspace 2',
             icon: <MdDashboard />,
             route: '/2',
         },
         {
+            id: 3,
             title: 'Workspace 3',
             icon: <MdDashboard />,
             route: '/3',
@@ -54,8 +59,8 @@ export const homeRouter = createBrowserRouter([
         element: <WorkspaceBoards />,
     },
     {
-        path: '/2',
-        element: <h1>home3</h1>,
+        path: '/workspaces/:id/members',
+        element: <MemberManagementPage />,
     },
     {
         path: '/3',

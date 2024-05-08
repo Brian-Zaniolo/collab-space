@@ -1,0 +1,19 @@
+.linkButton__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+
+    &:is(.active) {
+        background-color: var(--primary);
+        color: var(--whiteAccent);
+        scale: 1.05;
+    }
+
+    &:hover {
+        background-color: var(--fadedPrimary);
+    }
+}
