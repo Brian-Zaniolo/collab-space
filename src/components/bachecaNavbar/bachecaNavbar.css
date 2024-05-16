@@ -1,0 +1,77 @@
+.bachecaNavbar_navigation {
+    position: relative;
+    background-color: #0000003d;
+    backdrop-filter: blur(4px);
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 16px;
+    color: var(--whiteAccent);
+}
+
+.bachecaNavbar_navigation .buttonDefault {
+    border-style: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 95%;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 6px 12px;
+    color: var(--whiteAccent);
+    height: 32px;
+
+    &:hover {
+        filter: brightness(120%);
+        background-color: #6464643a;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        filter: grayscale();
+    }
+
+    &:checked {
+      background-color: var(--primary);
+      color: black;
+    }
+    
+}
+
+.bachecaName {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 18px;
+    height: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--whiteAccent);
+    font-weight: bold;
+
+    &:hover {
+        background-color: #6464643a;
+        filter: brightness(120%);
+    }
+}
+
+.bachecaNavbar_left {
+  width: 70%;
+}
+
+.bachecaNavbar_left input[type='radio'] {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    &:checked + label {
+      background-color: var(--primary);
+    }
+}

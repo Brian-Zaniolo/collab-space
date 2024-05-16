@@ -189,7 +189,30 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                 <FaAngleDown className="navbar_markdown" />
                             </span>
                         </div>
-                        {open && (
+                        <Visibilità_select open={open} refOutside={refOutside} valuesVisibility={valuesVisibility} onVisibilityClick={onVisibilityClick} />
+                    </div>
+                    <button
+                        type="submit"
+                        className="buttonDefault"
+                        disabled={!title}
+                        style={{
+                            width: '100%',
+                            marginTop: '5px',
+                            marginLeft: '0',
+                        }}
+                    >
+                        Crea
+                    </button>
+                </form>
+            </li>
+        </>
+    );
+};
+
+export const Visibilità_select = ({open, refOutside, valuesVisibility, onVisibilityClick}) => {
+    return (
+        <>
+            {open && (
                             <ul
                                 ref={refOutside}
                                 style={{
@@ -224,10 +247,6 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                                         {value.name}
                                                     </p>
                                                     <p
-                                                        style={{
-                                                            textAlign:
-                                                                'justify',
-                                                        }}
                                                     >
                                                         I membri della bacheca e
                                                         gli amministratori dello
@@ -251,10 +270,6 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                                         {value.name}
                                                     </p>
                                                     <p
-                                                        style={{
-                                                            textAlign:
-                                                                'justify',
-                                                        }}
                                                     >
                                                         Tutti i membri dello
                                                         Spazio di lavoro di
@@ -277,10 +292,6 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                                         {value.name}
                                                     </p>
                                                     <p
-                                                        style={{
-                                                            textAlign:
-                                                                'justify',
-                                                        }}
                                                     >
                                                         Chiunque abbia accesso a
                                                         internet può vedere
@@ -298,23 +309,8 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                 })}
                             </ul>
                         )}
-                    </div>
-                    <button
-                        type="submit"
-                        className="buttonDefault"
-                        disabled={!title}
-                        style={{
-                            width: '100%',
-                            marginTop: '5px',
-                            marginLeft: '0',
-                        }}
-                    >
-                        Crea
-                    </button>
-                </form>
-            </li>
         </>
-    );
-};
+    )
+}
 
 export default NavbarCreaBacheca;

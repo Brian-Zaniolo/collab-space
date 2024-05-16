@@ -9,9 +9,9 @@ const NavbarNotification = () => {
                     <h2 style={{ display: 'inline-block' }}>Notifiche</h2>
                     <p style={{ display: 'inline', right: '10px', position: 'absolute', marginTop: '20px' }}>
                         Mostra solo non lette{' '}
-                        <label class="switch">
+                        <label className="switch">
                             <input type="checkbox" />
-                            <span class="slider"></span>
+                            <span className="slider"></span>
                         </label>
                     </p>
                 </li>

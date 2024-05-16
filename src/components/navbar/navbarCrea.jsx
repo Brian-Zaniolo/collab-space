@@ -13,7 +13,6 @@ const NavbarCrea = ({close}) => {
 
     const handleCreaSpazio = () => {
         setCreaSpazio(!creaSpazio);
-        console.log(creaSpazio);
     }
 
     return (

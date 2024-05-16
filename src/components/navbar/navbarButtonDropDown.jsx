@@ -52,11 +52,11 @@ const NavbarButtonDropDown = ({ buttonName, control }) => {
                               )}{' '}
                       </>
                   ) : (
-                      <div>
-                          <span>
+                      <>
+                          <span style={{marginLeft: '-3.5px'}}>
                               <IoMdNotifications />
                           </span>
-                      </div>
+                      </>
                   )}
               </button>
               {isVisible ? (

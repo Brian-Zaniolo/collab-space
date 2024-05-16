@@ -15,9 +15,9 @@
     position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 60%;
+    width: 65%;
     background-color: var(--background);
-    margin: 5% auto;
+    margin: 4% auto;
     border-radius: 7px;
     border: 2px solid var(--hover-dark-btn);
 }
@@ -42,7 +42,7 @@
     height: 28px;
     width: 80%;
     outline: none;
-    border: 1px solid var(--onBackground);
+    border: 2px solid transparent;
 
     &:hover {
         filter: brightness(120%);
@@ -70,6 +70,7 @@
     resize: none;
     font-family: 'Montserrat', sans-serif;
     font-size: small;
+    border: 2px solid transparent;
 
     &:hover {
         filter: brightness(120%);
