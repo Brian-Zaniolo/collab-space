@@ -5,6 +5,7 @@
     height: 48px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid var(--onBackground);
 }
 
 .navbar_navigation .buttonDefault {
@@ -53,9 +54,11 @@
     padding-left: 30px;
     height: 28px;
     outline: none;
+    border: 2px solid transparent;
 
     &:hover {
         filter: brightness(120%);
+        border: 2px solid transparent;
     }
 
     &:focus {

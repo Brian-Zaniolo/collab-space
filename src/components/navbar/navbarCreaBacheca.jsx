@@ -189,7 +189,7 @@ const NavbarCreaBacheca = ({ back, close }) => {
                                 <FaAngleDown className="navbar_markdown" />
                             </span>
                         </div>
-                        <Visibilità_select open={open} refOutside={refOutside} valuesVisibility={valuesVisibility} onVisibilityClick={onVisibilityClick} />
+                        <VisibilitàSelect open={open} refOutside={refOutside} valuesVisibility={valuesVisibility} onVisibilityClick={onVisibilityClick} />
                     </div>
                     <button
                         type="submit"
@@ -209,7 +209,7 @@ const NavbarCreaBacheca = ({ back, close }) => {
     );
 };
 
-export const Visibilità_select = ({open, refOutside, valuesVisibility, onVisibilityClick}) => {
+export const VisibilitàSelect = ({open, refOutside, valuesVisibility, onVisibilityClick}) => {
     return (
         <>
             {open && (

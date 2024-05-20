@@ -4,10 +4,13 @@ import { FaStar } from 'react-icons/fa6';
 import { MdPublic } from 'react-icons/md';
 import { RiGitRepositoryPrivateFill } from 'react-icons/ri';
 import { FaUserFriends } from 'react-icons/fa';
-import './bachecaNavbar.css';
-import { Visibilità_select } from '../navbar/navbarCreaBacheca';
-import useOutsideClick from '../../hooks/useOutsideClick';
 import { BsThreeDots } from 'react-icons/bs';
+import { TbLayoutNavbar } from 'react-icons/tb';
+import { FiCalendar, FiMapPin } from 'react-icons/fi';
+import './bachecaNavbar.css';
+import { VisibilitàSelect } from '../navbar/navbarCreaBacheca';
+import BachecaNavbarFilter from './bachecaNavbarFilter';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 const BachecaNavbar = () => {
     const [nameBacheca, setNameBacheca] = useState('Placeholder');
@@ -98,7 +101,7 @@ const BachecaNavbar = () => {
                             <MdPublic />
                         )}
                     </button>
-                    <Visibilità_select
+                    <VisibilitàSelect
                         open={open}
                         refOutside={refOutside}
                         valuesVisibility={valuesVisibility}
@@ -111,19 +114,22 @@ const BachecaNavbar = () => {
                         defaultChecked
                     />
                     <label className="buttonDefault" htmlFor="Bacheca">
+                        <span className='bachecaNavbar_icon'><TbLayoutNavbar /> </span>
                         Bacheca
                     </label>
                     <input type="radio" id="Calendario" name="page" />
                     <label className="buttonDefault" htmlFor="Calendario">
+                        <span className='bachecaNavbar_icon'><FiCalendar /> </span>
                         Calendario
                     </label>
                     <input type="radio" id="Mappa" name="page" />
                     <label className="buttonDefault" htmlFor="Mappa">
+                        <span className='bachecaNavbar_icon'><FiMapPin /> </span>
                         Mappa
                     </label>
                 </div>
                 <div className="bachecaNavbar_right">
-                    <button className="buttonDefault">Filtri</button>
+                    <BachecaNavbarFilter />
                     <span style={{ borderLeft: '1px solid #6464643a' }}></span>
                     <button className="buttonDefault">
                         <BsThreeDots />

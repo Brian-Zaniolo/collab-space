@@ -75,3 +75,8 @@
       background-color: var(--primary);
     }
 }
+
+.bachecaNavbar_icon {
+    position: relative;
+    top: 2px;
+}
