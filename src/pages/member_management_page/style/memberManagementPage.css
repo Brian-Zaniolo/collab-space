@@ -66,16 +66,85 @@
             height: clamp(50vh, 75vh, 75vh);
             color: var(--whiteAccent);
 
+            .memberManagementPage__content__main__header {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+            }
+
             .memberManagementPage__content__main__member {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
                 border-radius: 1rem;
+                padding: 1rem 0;
                 background-color: var(--onBackground);
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-                gap: 1rem;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    color: var(--primary);
+                    font-weight: bold;
+                    transition: color 0.3s;
+                    padding: 0 1rem;
+                    border-radius: .5rem;
+
+                    &:hover {
+                        color: var(--whiteAccent);
+                        background-color: var(--fadedPrimary);
+                    }
+
+                    .icon {
+                        font-size: 1.5rem;
+                    }
+                }
             }
+        }
+    }
+}
+
+.member__editPopUp {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+
+    select {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    button {
+        border: none;
+        background-color: var(--fadedPrimary);
+        color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        width: clamp(10em, 20em, 20em);
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: var(--primary);
+        }
+
+        &:disabled {
+            background-color: var(--onBackground);
+            cursor: not-allowed;
+        }
+    }
+
+    button[type='delete'] {
+        background-color: indianred;
+
+        &:hover {
+            background-color: red;
         }
     }
 }

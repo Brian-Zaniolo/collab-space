@@ -1,8 +1,11 @@
 import './style/memberManagementPage.css';
 import { useState } from 'react';
+import Popup from 'reactjs-popup';
+import { MdEdit } from 'react-icons/md';
 
 const MemberManagementPage = () => {
     const [members, setMembers] = useState(demo.members);
+    const [role, setRole] = useState('');
     return (
         <div className="memberManagementPage__container">
             <h1>Member Management Page</h1>
@@ -70,11 +73,84 @@ const MemberManagementPage = () => {
                     </div>
                 </div>
                 <div className="memberManagementPage__content__main">
+                    <div className="memberManagementPage__content__main__header">
+                        <h3>Name</h3>
+                        <h3>Role</h3>
+                        <h3>Action</h3>
+                    </div>
                     {members.length !== 0 ? (
                         members.map((member) => (
                             <div className="memberManagementPage__content__main__member">
                                 <h3>{member.name}</h3>
                                 <p>{member.role}</p>
+                                <Popup
+                                    position={'left center'}
+                                    trigger={
+                                        <button>
+                                            <MdEdit className="icon" />
+                                        </button>
+                                    }
+                                    onClose={() => {
+                                        if (role) {
+                                            setMembers(
+                                                members.map((m) =>
+                                                    m.id === member.id
+                                                        ? {
+                                                              ...member,
+                                                              role: role,
+                                                          }
+                                                        : m
+                                                )
+                                            );
+                                            setRole('');
+                                        }
+                                    }}
+                                >
+                                    {(close) => (
+                                        <div className="member__editPopUp">
+                                            <h3>Edit</h3>
+                                            <select
+                                                onInput={(e) => {
+                                                    setRole(e.target.value);
+                                                }}
+                                            >
+                                                <option
+                                                    value=""
+                                                    defaultChecked={true}
+                                                >
+                                                    Select
+                                                </option>
+                                                <option value="Working">
+                                                    Working
+                                                </option>
+                                                <option value="Guest">
+                                                    Guest
+                                                </option>
+                                            </select>
+                                            <button
+                                                onClick={(e) => close()}
+                                                disabled={role === ''}
+                                            >
+                                                Save
+                                            </button>
+                                            <button
+                                                type="delete"
+                                                onClick={() => {
+                                                    setMembers(
+                                                        members.filter(
+                                                            (m) =>
+                                                                m.id !==
+                                                                member.id
+                                                        )
+                                                    );
+                                                    close();
+                                                }}
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    )}
+                                </Popup>
                             </div>
                         ))
                     ) : (
