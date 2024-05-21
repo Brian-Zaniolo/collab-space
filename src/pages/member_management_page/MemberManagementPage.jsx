@@ -2,12 +2,16 @@ import './style/memberManagementPage.css';
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import { MdEdit } from 'react-icons/md';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MemberManagementPage = () => {
     const [members, setMembers] = useState(demo.members);
     const [role, setRole] = useState('');
     return (
         <div className="memberManagementPage__container">
+            <ToastContainer />
+
             <h1>Member Management Page</h1>
             <div className="memberManagementPage__content">
                 <div className="memberManagementPage__content__sideMenu">
@@ -90,25 +94,10 @@ const MemberManagementPage = () => {
                                             <MdEdit className="icon" />
                                         </button>
                                     }
-                                    onClose={() => {
-                                        if (role) {
-                                            setMembers(
-                                                members.map((m) =>
-                                                    m.id === member.id
-                                                        ? {
-                                                              ...member,
-                                                              role: role,
-                                                          }
-                                                        : m
-                                                )
-                                            );
-                                            setRole('');
-                                        }
-                                    }}
                                 >
                                     {(close) => (
                                         <div className="member__editPopUp">
-                                            <h3>Edit</h3>
+                                            <h2>EDIT</h2>
                                             <select
                                                 onInput={(e) => {
                                                     setRole(e.target.value);
@@ -128,7 +117,39 @@ const MemberManagementPage = () => {
                                                 </option>
                                             </select>
                                             <button
-                                                onClick={(e) => close()}
+                                                onClick={(e) => {
+                                                    if (role) {
+                                                        setMembers(
+                                                            members.map((m) =>
+                                                                m.id ===
+                                                                member.id
+                                                                    ? {
+                                                                          ...member,
+                                                                          role: role,
+                                                                      }
+                                                                    : m
+                                                            )
+                                                        );
+                                                        toast.success(
+                                                            'Changes saved',
+                                                            {
+                                                                position:
+                                                                    'top-right',
+                                                                autoClose: 1000,
+                                                                closeOnClick: true,
+                                                                pauseOnHover: true,
+                                                                hideProgressBar: false,
+                                                                theme: 'dark',
+                                                                progressStyle: {
+                                                                    background:
+                                                                        'var(--primary)',
+                                                                },
+                                                            }
+                                                        );
+                                                        setRole('');
+                                                        close();
+                                                    }
+                                                }}
                                                 disabled={role === ''}
                                             >
                                                 Save
@@ -143,7 +164,23 @@ const MemberManagementPage = () => {
                                                                 member.id
                                                         )
                                                     );
-                                                    close();
+                                                    close('ciao');
+                                                    toast.success(
+                                                        'Member removed successfully',
+                                                        {
+                                                            position:
+                                                                'top-right',
+                                                            autoClose: 1000,
+                                                            closeOnClick: true,
+                                                            pauseOnHover: true,
+                                                            hideProgressBar: false,
+                                                            theme: 'dark',
+                                                            progressStyle: {
+                                                                background:
+                                                                    'var(--primary)',
+                                                            },
+                                                        }
+                                                    );
                                                 }}
                                             >
                                                 Remove

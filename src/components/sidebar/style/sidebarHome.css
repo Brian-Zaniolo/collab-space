@@ -8,6 +8,7 @@
     color: var(--whiteAccent);
     border-inline-end: 1px solid rgba(255, 255, 255, 0.1);
     overflow: scroll;
+    width: clamp(200px, 25dvw, 25dvw);
 
     .sidebarHome__content {
         display: flex;
